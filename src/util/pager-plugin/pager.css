@@ -1,0 +1,42 @@
+.page-wrap {
+    width: max-content;
+    margin: 30px auto;
+    font-size: 14px;
+}
+
+.page-wrap .page-item {
+    display: inline-block;
+    padding: 0 10px;
+    height: 36px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #3951B3;
+    margin: 0 6px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    user-select: none;
+}
+
+.page-wrap .page-item.page-num {
+    padding: 0;
+    min-width: 36px;
+}
+
+.page-wrap .page-item:not(.disabled):hover {
+    color: #fff;
+    background-color: #3951B3;
+    border-color: #3951B3;
+}
+
+.page-wrap .page-item.disabled {
+    color: #eee;
+    cursor: not-allowed;
+}
+
+.page-wrap .page-item.active {
+    background-color: #3951B3;
+    color: #fff;
+    border-color: #3951B3;
+}

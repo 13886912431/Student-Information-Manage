@@ -1,0 +1,116 @@
+@import "https://at.alicdn.com/t/font_2063331_0jf2is8eh5n.css";
+
+
+.wrapper {
+    width: 430px;
+    height: 330px;
+    position: absolute;
+    top: calc(50% - 165px);
+    left: calc(50% - 215px);
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 1px #949494;
+    border-radius: 3px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    padding: 35px 0px;
+    font-family: monospace;
+    background: linear-gradient(160deg, rgb(84, 109, 255), rgb(172, 110, 254), rgb(117, 230, 255));
+    color: #eee;
+    border-radius: 3px 3px 0 0;
+    cursor: default;
+}
+
+.wrapper .form {
+    height: calc(100% - 100px);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 3px 3px;
+}
+
+.form div:first-of-type {
+    margin-top: 20px;
+}
+
+.form div {
+    text-align: center;
+    position: relative;
+    width: 240px;
+    margin: 0px auto;
+}
+
+.form div span {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    color: #b8babc;
+}
+
+.form div input {
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    margin: 13px 0;
+    transition: border-bottom-color 0.2s;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.form div input:hover {
+    border-bottom-color: rgb(193, 193, 193);
+}
+
+.form div input:focus + span {
+    color: rgb(18, 183, 245);
+}
+
+.form div input:focus {
+    border-bottom-color: rgb(18, 183, 245);
+}
+
+.form div input.login-btn {
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    background-color: rgb(6, 188, 252);
+    color: #fff;
+    box-shadow: 0 0 5px rgb(6, 188, 252);
+    transition: background-color 0.2s;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.form div input.login-btn:hover {
+    background-color: rgb(31, 199, 253);
+}
+
+.form div .msg {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 130px;
+    height: 25px;
+    line-height: 25px;
+    z-index: 5;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid rgb(88, 130, 151);
+    border-radius: 3px;
+    box-shadow: 0 0 2px #000;
+    display: none;
+}
+
+.wrapper a {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    color: rgb(166, 166, 166);
+    font-size: 14px;
+}
+
+.wrapper a:hover {
+    color: rgb(131, 131, 131);
+}

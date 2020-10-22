@@ -1,0 +1,78 @@
+body,
+p,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu,
+figure,
+input {
+    margin: 0;
+}
+
+input,
+button,
+ul,
+ol,
+textarea,
+option,
+menu {
+    padding: 0;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button,
+textarea,
+select,
+summary,
+iframe {
+    outline: none;
+    border: none;
+}
+
+em,
+i,
+cite {
+    font-style: normal;
+}
+
+mark,
+button {
+    background-color: #fff;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
