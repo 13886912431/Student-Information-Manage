@@ -26,6 +26,7 @@ if (!localStorage.getItem("stuAccount") && !localStorage.getItem("stuPassword"))
     });
 } else {
     getTableData();
+    bindEvent();
 }
 
 location.hash = "student-list";
@@ -219,7 +220,6 @@ function bindEvent() {
         });
     });
 }
-bindEvent();
 
 /**
  * 获取学生数据
