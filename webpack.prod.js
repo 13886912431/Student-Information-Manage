@@ -22,7 +22,7 @@ const prodConfig = {
         minimize: true,
         minimizer: [new TerserWebpackPlugin(), new OptimizeCssAssetsWebpackPlugin()],
     },
-    plugins: [new WebpackBundleAnalyzer()],
+    // plugins: [new WebpackBundleAnalyzer()],
 };
 
 module.exports = merge(baseConfig, prodConfig);

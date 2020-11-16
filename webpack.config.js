@@ -19,6 +19,7 @@ function getHtmlPlugin() {
                 template: pages[key].html,
                 chunks: [key],
                 filename: pages[key].filename,
+                favicon: "./favicon.ico",
             })
         );
     }

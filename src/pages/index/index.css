@@ -184,12 +184,12 @@ body {
     text-align: center;
     color: #aaa;
     font-size: 1.1rem;
-    padding: 20px 0;
+    padding: 15px 0;
     display: none;
 }
 
 .drop-list li {
-    line-height: 60px;
+    line-height: 50px;
     cursor: pointer;
     position: relative;
 }
@@ -263,20 +263,9 @@ body {
     font-weight: 600;
 }
 
-.main .content-item {
-    position: absolute;
-    width: 100%;
-    display: none;
-}
-
-.main .content-item.show {
-    display: block;
-}
-
 .student-list table {
     width: 100%;
     text-align: center;
-    line-height: 30px;
     border-spacing: 1px;
 }
 
@@ -294,12 +283,13 @@ body {
 
 .student-list tbody {
     background-color: #fff;
+    font-size: 15px;
+    line-height: 35px;
 }
 
 .student-list table .btn {
-    border: none;
     color: #fff;
-    padding: 5px 10px;
+    padding: 7px 20px;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -310,6 +300,10 @@ body {
 
 .student-list table .btn.delete {
     background-color: #d9534f;
+}
+
+.student-list table .btn.disabled {
+    background-color: #ccc;
 }
 
 .modal {
@@ -391,8 +385,8 @@ body {
     font-size: 16px;
 }
 
-.form div .not-edit{
-    color:#e40000;
+.form div .not-edit {
+    color: #e40000;
     font-size: 12px;
 }
 
@@ -400,10 +394,27 @@ body {
     background-color: #5cb85c;
 }
 
+.main .content-item {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.main .content-item.show {
+    display: block;
+}
+
+.main .content-item.student-chart.show {
+    display: flex;
+}
+
+.main .content-item.student-chart {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .main .student-chart {
-    padding: 50px 0 0 100px;
-    box-sizing: border-box;
-    transition: padding-left 0.3s;
+    margin-top: 20px;
 }
 
 .main .student-chart .address-chart,
@@ -423,8 +434,14 @@ body {
         right: 0;
         margin: 0 auto;
     }
+    .header .title .icon {
+        display: none;
+    }
     .header .search {
         display: none;
+    }
+    .header .logout {
+        padding: 0 10px;
     }
     .menu {
         left: -200px;
@@ -435,8 +452,5 @@ body {
     }
     .header .drop-list {
         display: block;
-    }
-    .main .student-chart {
-        padding-left: 30px;
     }
 }

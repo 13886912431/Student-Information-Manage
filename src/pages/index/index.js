@@ -15,8 +15,12 @@ let limit = 10; // 一页显示多少条数据
 let current = 1; // 当前页码
 let tableData = []; // 当前显示的表格数据
 
+let isAdmin = false; // 是否是管理员
+
 // 检查当前有没有登陆
-if (!localStorage.getItem("stuAccount") && !localStorage.getItem("stuPassword")) {
+const stuAccount = localStorage.getItem("stuAccount");
+const stuPassword = localStorage.getItem("stuPassword");
+if (!stuAccount && !stuPassword) {
     message({
         content: "当前未登陆，请先登陆",
         type: "load",
@@ -25,11 +29,13 @@ if (!localStorage.getItem("stuAccount") && !localStorage.getItem("stuPassword"))
         },
     });
 } else {
+    location.hash = "student-list";
+    if (stuAccount === "13886912431" && stuPassword === "liuyinlin610") {
+        isAdmin = true;
+    }
     getTableData();
     bindEvent();
 }
-
-location.hash = "student-list";
 
 function bindEvent() {
     $(".menu dd").click(function () {
@@ -85,6 +91,10 @@ function bindEvent() {
 
     // 点击弹出编辑表单
     $("#tbody").on("click", ".edit", function () {
+        if (!isAdmin) {
+            message("您不是管理员", "warn");
+            return;
+        }
         $(".modal").slideDown();
         callFillForm(tableData[$(this).data("index")]);
     });
@@ -139,6 +149,10 @@ function bindEvent() {
 
     //删除按钮
     $("#tbody").on("click", ".delete", function () {
+        if (!isAdmin) {
+            message("您不是管理员", "warn");
+            return;
+        }
         const sNo = tableData[$(this).data("index")].sNo;
         message({
             content: `确定删除学号${sNo}的学生信息吗？`,
@@ -262,9 +276,7 @@ function createPager() {
  */
 function renderTable(data) {
     const str = data.reduce(function (prev, item, index) {
-        return (
-            prev +=
-            `<tr>
+        return (prev += `<tr>
                 <td>${item.sNo}</td>
                 <td>${item.name}</td>
                 <td>${item.sex ? "女" : "男"}</td>
@@ -273,11 +285,10 @@ function renderTable(data) {
                 <td>${item.phone}</td>
                 <td>${item.address}</td>
                 <td>
-                    <button class="edit btn" data-index=${index}>编辑</button>
-                    <button class="delete btn" data-index=${index}>删除</button>
+                    <button class="edit btn ${isAdmin ? "" : "disabled"}" data-index=${index}>编辑</button>
+                    <button class="delete btn ${isAdmin ? "" : "disabled"}" data-index=${index}>删除</button>
                 </td>
-            </tr>`
-        );
+            </tr>`);
     }, "");
     $("#tbody").html(str);
 }
