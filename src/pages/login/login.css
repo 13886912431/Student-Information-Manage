@@ -16,7 +16,7 @@
     text-align: center;
     padding: 35px 0px;
     font-family: monospace;
-    background: linear-gradient(160deg, rgb(84, 109, 255), rgb(172, 110, 254), rgb(117, 230, 255));
+    background: linear-gradient(160deg, #546dff, #ac6efe, #75e6ff);
     color: #eee;
     border-radius: 3px 3px 0 0;
     cursor: default;
@@ -55,19 +55,19 @@
     box-sizing: border-box;
     margin: 13px 0;
     transition: border-bottom-color 0.2s;
-    border-bottom: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .form div input:hover {
-    border-bottom-color: rgb(193, 193, 193);
+    border-bottom-color: #c1c1c1;
 }
 
 .form div input:focus + span {
-    color: rgb(18, 183, 245);
+    color: #12b7f5;
 }
 
 .form div input:focus {
-    border-bottom-color: rgb(18, 183, 245);
+    border-bottom-color: #12b7f5;
 }
 
 .form div input.login-btn {
@@ -75,16 +75,16 @@
     height: 35px;
     line-height: 35px;
     border-radius: 5px;
-    background-color: rgb(6, 188, 252);
+    background-color: #06bcfc;
     color: #fff;
-    box-shadow: 0 0 5px rgb(6, 188, 252);
+    box-shadow: 0 0 5px #06bcfc;
     transition: background-color 0.2s;
     font-size: 16px;
     margin-top: 15px;
 }
 
 .form div input.login-btn:hover {
-    background-color: rgb(31, 199, 253);
+    background-color: #1fc7fd;
 }
 
 .form div .msg {
@@ -97,7 +97,7 @@
     z-index: 5;
     font-size: 12px;
     background-color: #fff;
-    border: 1px solid rgb(88, 130, 151);
+    border: 1px solid #588297;
     border-radius: 3px;
     box-shadow: 0 0 2px #000;
     display: none;
@@ -107,16 +107,17 @@
     position: absolute;
     bottom: 7px;
     left: 10px;
-    color: rgb(166, 166, 166);
+    color: #a6a6a6;
     font-size: 14px;
 }
 
 .wrapper a:hover {
-    color: rgb(131, 131, 131);
+    color: #838383;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .wrapper {
-        width: 350px;
+        width: 100%;
     }
 }
+

@@ -14,5 +14,4 @@ module.exports = {
         html: "./src/pages/register/register.html",
         filename: "register.html",
     }
-
 };
