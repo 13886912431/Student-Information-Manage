@@ -1,12 +1,12 @@
 @import "https://at.alicdn.com/t/font_2063331_0jf2is8eh5n.css";
 
-
 .wrapper {
     width: 430px;
     height: 330px;
     position: absolute;
-    top: calc(50% - 165px);
-    left: calc(50% - 215px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 2px 2px 10px 1px #949494;
     border-radius: 3px;
@@ -113,4 +113,10 @@
 
 .wrapper a:hover {
     color: rgb(131, 131, 131);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 350px;
+    }
 }

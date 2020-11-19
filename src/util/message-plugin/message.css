@@ -8,17 +8,27 @@
     transition: transform 0.3s;
     border: 2px solid #000;
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: max(7px, 0.7vw) max(15px, 1vw);
     background-color: #fff;
-    font-size: 28px;
+    font-size: max(16px, 1.3vw);
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999999;
+    z-index: 99999;
 }
 
 .message .iconfont {
-    font-size: 42px;
+    font-size: max(26px, 2vw);
     margin-right: 5px;
-    vertical-align: -6px;
+    display: flex;
+}
+
+.message .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message .content .text {
+    white-space: nowrap;
 }
 
 /* 普通信息 */
@@ -74,11 +84,10 @@
 
 .message.load .iconfont::after {
     content: "";
-    display: inline-block;
-    width: 26px;
-    height: 26px;
+    width: max(20px,1.3vw);
+    height: max(20px,1.3vw);
     border: 5px solid #aec6fa;
-    margin-right: 10px;
+    margin-right: 5px;
     border-radius: 50%;
     border-top-color: #0562ee;
     animation: turn 1s infinite;
@@ -99,6 +108,10 @@
     color: #1b1b1b;
 }
 
+.message.confirm .content .iconfont {
+    display: none;
+}
+
 .message .confirm-box {
     display: flex;
     justify-content: space-around;
@@ -109,7 +122,7 @@
 .message .confirm-box .false-btn {
     border: 2px solid #000;
     border-radius: 5px;
-    padding: 6px 30px;
+    padding: max(2px, 0.25vw) max(18px, 1.4vw);
     cursor: pointer;
     white-space: nowrap;
     font-size: 16px;

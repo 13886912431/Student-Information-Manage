@@ -60,7 +60,7 @@ export function message(...arg) {
         function createDom() {
             option.div = document.createElement("div");
             option.div.className = `message ${option.type}`;
-            option.div.innerHTML = `<span class="iconfont"></span><span class="content">${option.content}</span>`;
+            option.div.innerHTML = `<div class="content"><span class="iconfont"></span><span class="text">${option.content}</span></div>`;
 
             if (option.type === "confirm") {
                 option.duration = 0;

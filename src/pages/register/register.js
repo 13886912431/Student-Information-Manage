@@ -6,16 +6,6 @@ import "./register.css";
 import "../common/reset.css";
 import "../../util/message-plugin/message.css";
 
-const oInput = $(".form input");
-
-$(".form input").on("input", function () {
-    if ($(oInput[0]).val() || $(oInput[1]).val() || $(oInput[2]).val() || $(oInput[3]).val()) {
-        $(".form label").show();
-    } else {
-        $(".form label").hide();
-    }
-});
-
 /**
  * 注册按钮的点击函数
  */
