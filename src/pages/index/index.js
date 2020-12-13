@@ -30,7 +30,7 @@ if (!stuAccount && !stuPassword) {
     });
 } else {
     location.hash = "student-list";
-    if (stuAccount === "13886912431" && stuPassword === "liuyinlin610") {
+    if (stuAccount === "serein" && stuPassword === "zxcvbnm") {
         isAdmin = true;
     }
     getTableData();
