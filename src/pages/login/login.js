@@ -1,7 +1,6 @@
-import { API } from "../common/API.js";
-import { message } from "../../util/message-plugin/message.js";
+import API from "../common/API.js";
+import message from "../../util/message-plugin/message.js";
 import $ from "jquery";
-
 
 import "./login.css";
 import "../common/reset.css";

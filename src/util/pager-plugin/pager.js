@@ -1,4 +1,4 @@
-export class Pager {
+export default class Pager {
     constructor(option) {
         const defaultOptions = {
             total: 1,

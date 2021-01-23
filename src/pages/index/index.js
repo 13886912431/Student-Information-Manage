@@ -1,7 +1,7 @@
-import { API } from "../common/API.js";
+import API from "../common/API.js";
 
-import { Pager } from "../../util/pager-plugin/pager.js";
-import { message } from "../../util/message-plugin/message.js";
+import Pager from "../../util/pager-plugin/pager.js";
+import message from "../../util/message-plugin/message.js";
 import echarts from "echarts";
 import $ from "jquery";
 

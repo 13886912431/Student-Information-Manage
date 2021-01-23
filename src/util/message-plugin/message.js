@@ -8,7 +8,7 @@
  * confirm（确定、取消）
  * @param  {...any} arg
  */
-export function message(...arg) {
+export default function message(...arg) {
     if (document.querySelector(".message")) {
         return;
     }

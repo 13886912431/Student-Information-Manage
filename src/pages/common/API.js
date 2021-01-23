@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-export const API = {
+export default {
     /**
      * 按页获取学生信息
      * @param {*} data
