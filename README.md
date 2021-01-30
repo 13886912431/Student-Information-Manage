@@ -1,7 +1,17 @@
-# Student Information Manage
+# student-admin
 
-1.  ```npm i``` 下载依赖
+1. 下载依赖
+```
+npm install
+```
 
-2. ```npm run serve``` 打开开发服务器
+2. 开发服务器
+```
+npm run serve
+```
 
-3. ```npm run build``` 打包
+3. 打包
+```
+npm run build
+```
+
