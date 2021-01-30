@@ -1,3 +1,5 @@
+const path = require("path")
+
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -32,6 +34,7 @@ module.exports = {
         filename: "js/[name].[chunkhash:3].js",
         chunkFilename: "common/common.[chunkhash:3].js",
         publicPath: "/",
+        path: path.resolve(__dirname, "docs")
     },
     stats: {
         colors: true,
