@@ -33,7 +33,7 @@ module.exports = {
     output: {
         filename: "js/[name].[chunkhash:3].js",
         chunkFilename: "common/common.[chunkhash:3].js",
-        publicPath: "https://13886912431.github.io/student-admin.github.io",
+        publicPath: "https://13886912431.github.io/student-admin",
         path: path.resolve(__dirname, "docs")
     },
     stats: {

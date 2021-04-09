@@ -1,7 +1,7 @@
 {
-  "name": "student-information-manage",
+  "name": "student-admin",
   "version": "1.0.0",
-  "description": "student information manage",
+  "description": "student-admin",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
